@@ -131,9 +131,23 @@ ggplot(worst_10_airports, aes(x = name, y = prop_late_airport)) +
 knitr::kable(head(airport_df[1:6, c(1,5)]))
 ```
 
-<br> Part 2
+## Part 2
+
+<br> What is one of the busiest airports?
 
 ```{r}
+ggplot(airport_df, aes(x = name, y = n_flights)) + 
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  labs(title = "Most Popular Airport", x = "Airport", y = "Number of Departures")
+```
 
+<br> What is the average flight time based on airports?
+
+```{r}
+ggplot(airport_df, aes(x = name, y = avg_distance)) + 
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  labs(title = "Most Popular Airport", x = "Airport", y = "Number of Departures")
 ```
 
