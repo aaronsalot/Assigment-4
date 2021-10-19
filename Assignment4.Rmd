@@ -7,6 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<br> [Aaron Salot's Assignment 4 Github](https://github.com/aaronsalot/Assigment-4)
+
 
 ```{r}
 library(tidyverse) 
